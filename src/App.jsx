@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React from 'react'
 import './App.css'
-
+import Header from '../src/component/header/header.jsx'
+import Footer from '../src/component/footer/footer.jsx'
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <div className="App">
-      <h1>Coucou Diego</h1>
-      <p className='text-neutral-100 bg-cyan-600'>Je suis un repo propre</p>
+    <div>
+      <Header/>
+      <Footer /> 
     </div>
   )
 }

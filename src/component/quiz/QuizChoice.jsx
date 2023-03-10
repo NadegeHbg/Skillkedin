@@ -1,6 +1,10 @@
 const QuizChoice = () => {
     return (
-        <h1>Categories are gonna be here</h1>
+        <div className="container mx-auto flex flex-wrap">
+            <div className="min-w-[200px] min-h-[50px]">
+                hello
+            </div>
+        </div>
     )
 }
 

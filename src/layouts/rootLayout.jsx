@@ -4,7 +4,7 @@ import Footer from "../component/footer/footer"
 
 const RootLayout = () => {
     return (
-        <div className="root-layout">
+        <div className="root-layout text-primary">
             <header  >
                 <Header />
                 {/* <HeaderDashboard /> */}

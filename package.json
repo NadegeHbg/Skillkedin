@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.12",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",

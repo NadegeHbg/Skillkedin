@@ -1,16 +1,24 @@
-import React from 'react'
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import './App.css'
-import Header from '../src/component/header/header.jsx'
-import Footer from '../src/component/footer/footer.jsx'
-function App() {
- 
+import RootLayout from "./layouts/rootLayout";
+import HomePage from "./pages/homePage";
+import QuizPage from "./pages/quizPage";
 
-  return (
-    <div>
-      <Header/>
-      <Footer /> 
-    </div>
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+
+    <Route path="/" element={<RootLayout />}>
+      {/* from origin project - example of routing*/}
+      <Route index element={<HomePage />} />
+      <Route path="/quiz/:cat" element={<QuizPage />} />
+    </Route>
+
   )
+);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

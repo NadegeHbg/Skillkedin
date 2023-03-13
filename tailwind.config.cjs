@@ -27,7 +27,7 @@ theme: {
       lg: "2rem",
   },
   fontFamily: {
-      mont: ["Montserrat", "regular"],
+    'montserrat': ['Montserrat', "regular"],
   },
 
   extend: {

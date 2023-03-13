@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '../../assets/Skillked-logo.png'
+import logo from '../../assets/logos/Skillked-logo.png';
+// import { Link } from "react-router-dom";
+
+import text from '../../assets/logos/Skillkedin-whitetext.png'
 
 
-function Header() {
+function Header () {
     return (
         <div>
             <nav className='flex w-auto justify-center align-center bg-primary sm: h-40'>
@@ -11,8 +15,8 @@ function Header() {
                 <button className='hidden sm:flex my-auto mx-auto bg-white font-semibold hover:text-primary py-2 px-4 border border-transparent rounded '>HOME </button>
                                 
             </nav>
-        </div>
+        </div>    
     )
 }
 
-export default Header;
+export default Header

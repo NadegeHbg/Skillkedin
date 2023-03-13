@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Components/HomePage';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <h1>Coucou Diego</h1>
-      <p className='text-neutral-100 bg-cyan-600'>Je suis un repo propre</p>
+       <Router>
+          <Routes>
+           <Route path="/" element={<HomePage/>}/>
+           
+          </Routes>
+        </Router>
     </div>
   )
 }

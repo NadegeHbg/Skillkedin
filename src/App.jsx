@@ -1,19 +1,24 @@
-import { useState } from 'react'
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './Components/HomePage';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 import './App.css'
+import RootLayout from "./layouts/rootLayout";
+import HomePage from "./pages/homePage";
+import QuizPage from "./pages/quizPage";
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+
+    <Route path="/" element={<RootLayout />}>
+      {/* from origin project - example of routing*/}
+      <Route index element={<HomePage />} />
+      <Route path="/quiz/:cat" element={<QuizPage />} />
+    </Route>
+
+  )
+);
 
 function App() {
-  return (
-    <div className="App">
-       <Router>
-          <Routes>
-           <Route path="/" element={<HomePage/>}/>
-           
-          </Routes>
-        </Router>
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

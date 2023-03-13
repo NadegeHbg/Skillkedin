@@ -33,7 +33,7 @@ theme: {
   extend: {
       colors: {
           primary: "#252D48",
-          secondary: "#Secondary",
+          secondary: "#6E8387",
           wrong: "#FF5D5D",
           neutral: "#FFFFFF",
       },

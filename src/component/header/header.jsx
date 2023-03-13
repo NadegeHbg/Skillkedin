@@ -1,21 +1,20 @@
 import logo from '../../assets/logos/Skillked-logo.png';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
+import text from '../../assets/logos/Skillkedin-whitetext.png'
 
 
-
-function Header() {
+function Header () {
     return (
         <div>
-            <nav className=' bg-primary'>
-                <div className='container mx-auto flex justify-center md:justify-between items-center'>
-                    <Link to="/">
-                        <img src={logo} alt="logo" className='w-24  h-24 hover:rotate-[360deg] transition-all duration-500 hover:scale-[1.5] motion-reduce:transition-none' />
-                    </Link>
-                    <Link to="/" className='hidden md:block text-center mr-8 py-1 min-w-[100px] bg-neutral hover:bg-secondary hover:border-2 hover:text-neutral hover:scale-[1.1] transition-all'>Home</Link>
-                </div>
+            <nav className='flex w-auto justify-center align-center bg-primary sm: h-40'>
+                <img src={logo} alt="logo" className= 'w-auto mx-auto h-24 md:w-auto h-36 my-auto'/>
+                <img src={text} alt="text" className= 'hidden sm:flex h-20 my-auto mx-auto'/>
+                <button className='hidden sm:flex my-auto mx-auto bg-white font-semibold hover:text-primary py-2 px-4 border border-transparent rounded '>HOME </button>
+                                
             </nav>
-        </div>
+        </div>    
     )
 }
 
-export default Header;
+export default Header

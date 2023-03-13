@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../../assets/Skillked-logo.png'
-import logo from '../../assets/logos/Skillked-logo.png';
+import logo from '../../assets/logos/Skillked-logo.png'
+
 // import { Link } from "react-router-dom";
 
 import text from '../../assets/logos/Skillkedin-whitetext.png'

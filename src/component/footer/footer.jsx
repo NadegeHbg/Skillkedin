@@ -8,7 +8,7 @@ import { BiMessageAltAdd} from 'react-icons/bi';
 function Footer () {
     return (
         <div>
-            <ul className="text-white fixed bottom-0  h-12 bg-secondary w-full flex items-center justify-center">
+            <ul className="text-white fixed bottom-0  h-12 bg-secondary w-full flex items-center justify-center md:hidden ">
                 <li className="hover:text-primary m-auto"><MdSkipPrevious/></li>
                 <li className="hover:text-primary m-auto"><MdSkipNext/></li>
                 <li className="hover:text-primary m-auto"><FaHome/></li>

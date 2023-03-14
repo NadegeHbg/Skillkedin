@@ -1,0 +1,18 @@
+/* changing the color of the border,font,placeholder from the input field */
+
+.MuiFormLabel-root.Mui-focused {
+    color: white!important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+}
+.MuiFormLabel-root {
+    color: white!important;
+}
+.MuiOutlinedInput-root:not(.Mui-focused) .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+    
+}
+.MuiOutlinedInput-input {
+    color: white !important;
+}

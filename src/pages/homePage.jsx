@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import './homePage.css'
 import Lottie from "lottie-react";
 import { useState } from 'react';
 import textbl from '../assets/logos/Skillkedin-bluetext.png';

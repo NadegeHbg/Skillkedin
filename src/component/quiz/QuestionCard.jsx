@@ -2,39 +2,19 @@ import React, { useState,useEffect } from 'react';
 import QuizChoice from './QuizChoice';
 
 
-const Question= () => {
-	
-	console.log(QuizChoice.category);
-	
-		const [question,setQuestion] = useState([])
-		const getQuestion = async () => {
-			try {
-			  const response = await fetch(`http://localhost:8000/getCategory/:category`)
-			  const responseData = await response.json();
-			  setQuestion(responseData)
-			  question.sort();
-			  console.log(question,"question")
-			} catch (err) {
-			  console.error(err.message)
-			}
-		  }
-		  useEffect(() => {
-			getQuestion()
-		  }, []);
-	const questions = [
-		{
-			questionText: 'What is the capital of France?',
-			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
-			],
-		}
-	
-		
-		
-		
+const QuestionCard= ({que}) => {
+	// console.log(que)
+	// console.log(que.question)
+    const questions = [
+        {	
+            questionText: que.question,
+            answerOptions: [
+                { answerText: que.answer_1.text, isCorrect: que.answer_1.is_right },
+                { answerText: que.answer_2.text, isCorrect: que.answer_2.is_right },
+                { answerText: que.answer_3.text, isCorrect: que.answer_3.is_right},
+                { answerText: que.answer_4.text, isCorrect: que.answer_4.is_right },
+            ],
+        }
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -80,4 +60,4 @@ const Question= () => {
 		</div>
 	);
 }
-export default Question;
+export default QuestionCard;

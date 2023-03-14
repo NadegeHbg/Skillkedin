@@ -1,6 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import QuizChoice from './QuizChoice';
 
-export default function Question() {
+
+const Question= () => {
+	
+	console.log(QuizChoice.category);
+	
+		const [question,setQuestion] = useState([])
+		const getQuestion = async () => {
+			try {
+			  const response = await fetch(`http://localhost:8000/getCategory/:category`)
+			  const responseData = await response.json();
+			  setQuestion(responseData)
+			  question.sort();
+			  console.log(question,"question")
+			} catch (err) {
+			  console.error(err.message)
+			}
+		  }
+		  useEffect(() => {
+			getQuestion()
+		  }, []);
 	const questions = [
 		{
 			questionText: 'What is the capital of France?',
@@ -10,34 +30,11 @@ export default function Question() {
 				{ answerText: 'Paris', isCorrect: true },
 				{ answerText: 'Dublin', isCorrect: false },
 			],
-		},
-		{
-			questionText: 'Who is CEO of Tesla?',
-			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'The iPhone was created by which company?',
-			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'How many Harry Potter books are there?',
-			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
-			],
-		},
+		}
+	
+		
+		
+		
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -83,3 +80,4 @@ export default function Question() {
 		</div>
 	);
 }
+export default Question;

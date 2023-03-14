@@ -3,7 +3,7 @@ import './App.css'
 import Question from "./component/quiz/QuestionCard";
 import RootLayout from "./layouts/rootLayout";
 import HomePage from "./pages/homePage";
-import QuizPage from "./pages/quizPage";
+import QuizPage from "./pages/QuizPage";
 
 
 const router = createBrowserRouter(
@@ -12,7 +12,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       {/* from origin project - example of routing*/}
       <Route index element={<HomePage />} />
-      <Route path="/quiz/:cat" element={<QuizPage />}/>
+      <Route path="/:cat" element={<QuizPage />}/>
        <Route path="/question" element={<Question />} />
     </Route>
 

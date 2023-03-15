@@ -10,7 +10,7 @@ const QuizChoice = () => {
       const responseData = await response.json();
       setCategory(responseData)
       category.sort();
-      console.log(category, "category")
+      // console.log(category, "category")
     } catch (err) {
       console.error(err.message)
     }
@@ -24,7 +24,7 @@ const QuizChoice = () => {
       {/* rendering all category names and adding Category link */}
       {category.map((cat) => {
         return (
-          <div key={cat} className="border-[1px] border-primary rounded-md basis-[200px] inline-flex justify-center items-center min-h-[50px] hover:scale-110 hover:bg-primary hover:text-neutral transition-all duration-500">
+          <div key={cat} className="border-[1px] text-center border-primary rounded-md basis-[200px] inline-flex justify-center items-center min-h-[50px] hover:scale-110 hover:bg-primary hover:text-neutral transition-all duration-500">
             <Link to={`/${cat}`}>{cat}</Link>
           </div>
         )
